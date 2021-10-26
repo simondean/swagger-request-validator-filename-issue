@@ -1,0 +1,29 @@
+openapi: 3.0.1
+info:
+  title: Example OpenAPI spec
+  version: 0.0.1
+paths:
+  '/oranges':
+    get:
+      responses:
+        200:
+          description: '200 response'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetOrangesResponse'
+  '/pears':
+    get:
+      responses:
+        200:
+          description: '200 response'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPearsResponse'
+components:
+  schemas:
+    GetOrangesResponse:
+      $ref: get.oranges.response.yaml
+    GetPearsResponse:
+      $ref: get.pears.response.yaml

@@ -1,0 +1,16 @@
+plugins {
+  id "java"
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation "com.atlassian.oai:swagger-request-validator-core:2.20.0"
+  testImplementation "org.junit.jupiter:junit-jupiter:5.8.1"
+}
+
+test {
+  useJUnitPlatform()
+}
