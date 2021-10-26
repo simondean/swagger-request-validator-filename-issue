@@ -3,27 +3,19 @@ info:
   title: Example OpenAPI spec
   version: 0.0.1
 paths:
-  '/oranges':
-    get:
+  '/example':
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExamplePost'
       responses:
-        200:
-          description: '200 response'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GetOrangesResponse'
-  '/pears':
-    get:
-      responses:
-        200:
-          description: '200 response'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GetPearsResponse'
+        204:
+          description: No content
 components:
   schemas:
-    GetOrangesResponse:
-      $ref: get.oranges.response.yaml
-    GetPearsResponse:
-      $ref: get.pears.response.yaml
+    Example:
+      $ref: example.get.yaml
+    ExamplePost:
+      $ref: example.post.yaml
