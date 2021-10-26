@@ -7,6 +7,7 @@ repositories {
 }
 
 dependencies {
+  implementation "ch.qos.logback:logback-classic:1.2.6"
   implementation "com.atlassian.oai:swagger-request-validator-core:2.20.0"
   testImplementation "org.junit.jupiter:junit-jupiter:5.8.1"
 }
